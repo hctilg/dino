@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: var(--width);
+  height: var(--height);
+  background-color: #fefefe;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Play", sans-serif;
+  overflow-x: hidden;
+}
+
+#game-screen {
+  position: relative;
+  width: var(--width);
+  height: 640px;
+}
+
+#game-display {
+  position: absolute;
+}
+
+#scoreboard {
+  position: absolute;
+  top: 540px;
+  width: var(--width);
+  text-align: center;
+  font-size: 50px;
+  color: #333333;
+}
+
+#start-screen {
+  position: absolute;
+  top: 20px;
+}
+
+#gameover-screen {
+  visibility: hidden;
+  position: absolute;
+  width: var(--width);
+  height: 640px;
+  opacity: 0;
+  transition: opacity 1s;
+  text-align: center;
+}
+
+#gameover {
+  width: 280px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 40px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+#replay {
+  max-width: 140px;
+  background-color: #45433a;
+  border-radius: 2pt;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: background-color 1s;
+  margin: 100px auto;
+}
+
+#replay:hover {
+  background-color: #ffffff;
+  color: #333333;
+  cursor: pointer;
+}
+
+#hint {
+  position: absolute;
+  top: 320px;
+  left: 80px;
+  width: calc(var(--width) - 80px);
+  font-size: 18px;
+  opacity: 1;
+  transition: opacity 1s;
+}
