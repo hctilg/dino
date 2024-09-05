@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', ev => {
   let bonePtr = 0;
   let boneStart = 400;
   let flyGap = 180;
-  let boneGap = 280;
+  let boneGap = (innerWidth < 640 ? 280 : 280 + Math.floor(innerWidth / 280) * 10);
   
   let bones = Array.from({ length: ((innerWidth < (360 * 2) ? 1 : Math.floor(innerWidth / 360)) * 3) }, (_, i) => {
     return {
